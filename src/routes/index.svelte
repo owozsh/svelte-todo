@@ -5,6 +5,7 @@ import Sidebar from "../components/Sidebar.svelte";
 
 <svelte:head>
 	<main>
+		<title>Aisaka</title>
 		<Sidebar/>
 		<MainView/>
 	</main>

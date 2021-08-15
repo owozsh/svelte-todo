@@ -8,13 +8,15 @@ import AddButton from "./AddButton.svelte";
 </div>
 
 <style lang="scss">
+    @import '../styles/vars.scss';
+
     .mainView {
         position: relative;
         display: flex;
         flex-direction: column;
         justify-content: center;
         
-        background-color: #1f1f1f;
+        background-color: $black;
         border-radius: 12px;
     }
 </style>

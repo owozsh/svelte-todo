@@ -3,6 +3,8 @@ import TiPlus from 'svelte-icons/ti/TiPlus.svelte'
 </script>
 
 <style lang="scss">
+    @import '../styles/vars.scss';
+
     button {
         display: flex;
         justify-content: center;
@@ -13,15 +15,15 @@ import TiPlus from 'svelte-icons/ti/TiPlus.svelte'
         bottom: 20px;
         width: 3rem;
         height: 3rem;
-        color: #1f1f1f;
+        color: $black;
     
         border: none;
         border-radius: 10px;
-        background-color: #dddddd;
+        background-color: $white;
     }
     
     .icon {
-        color: #1f1f1f;
+        color: $black;
 
         width: 1.5rem;
         height: 1.5rem;

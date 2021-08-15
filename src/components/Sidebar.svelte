@@ -11,6 +11,8 @@
 </nav>
 
 <style lang="scss">
+    @import '../styles/vars.scss';
+
     nav {
         display: flex;
         flex-direction: column;
@@ -32,12 +34,12 @@
         padding: 50px;
         box-sizing: border-box;
 
-        background-color: #1f1f1f;
+        background-color: $black;
         border-radius: 12px;
     }
 
     li {
-        color: #ddd;
+        color: $white;
         list-style: none;
         font-family: 'STIX Two Text', serif;
 

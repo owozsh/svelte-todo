@@ -13,13 +13,15 @@ import Sidebar from "../components/Sidebar.svelte";
 
 
 <style lang="scss">
+	@import '../styles/vars';
+
 	:global(*) {
 		box-sizing: border-box;
 	}
 
 	:global(body) {
 		height: 100vh;
-		background-color: #dddddd;
+		background-color: $white;
 		
 		margin: 0;
 		padding: 0;

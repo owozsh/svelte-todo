@@ -1,9 +1,11 @@
 <script>
 import AddButton from "./AddButton.svelte";
+import EverydayTasks from "./EverydayTasks.svelte";
 
 </script>
 
 <div class="mainView">
+    <EverydayTasks/>
     <AddButton/>
 </div>
 
@@ -14,7 +16,6 @@ import AddButton from "./AddButton.svelte";
         position: relative;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         
         background-color: $black;
         border-radius: 12px;

@@ -21,7 +21,10 @@
         background-color: #1f1f1f;
     }
 
-    :global(li) {
+    li {
+        color: #FFF;
+        list-style: none;
+
         border: 0;
         padding: 0;
         box-sizing: border-box;
@@ -45,14 +48,5 @@
         align-items: flex-end;
 
         padding-right: 70px;
-
-        height: 100%;
-        width: 30%;
-        
-    }
-
-    li {
-        color: #FFF;
-        list-style: none;
     }
 </style>

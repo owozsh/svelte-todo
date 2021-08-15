@@ -1,9 +1,12 @@
 <script lang="ts">
-	import Sidebar from "./components/Sidebar.svelte";
+	import MainView from "./components/MainView.svelte";
+import Sidebar from "./components/Sidebar.svelte";
 </script>
 
 <main>
 	<Sidebar/>
+	<MainView/>
+	<div></div>
 </main>
 
 <style lang="scss">
@@ -20,7 +23,16 @@
 	}
 
 	main {
-		display: flex;
+		display: grid;
+		grid-template-columns: 30% 40% 30%;
 		height: 100%;
+
+		flex-grow: 1;
+  		flex-shrink: 1;
+
+		align-items: stretch;
+		justify-content: center;
+
+		padding: 50px;
 	}
 </style>

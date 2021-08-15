@@ -1,3 +1,8 @@
+<script>
+import ViewStack from "./ViewStack.svelte";
+
+</script>
+
 <nav class="sidebar">
     <ul>
         <li>Today</li>
@@ -7,6 +12,15 @@
 </nav>
 
 <style lang="scss">
+    :global(nav) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-self: flex-end;
+    
+        padding-right: 70px;
+    }
+
     :global(ul) {
         display: flex;
         flex-direction: column;
@@ -21,7 +35,7 @@
         background-color: #1f1f1f;
     }
 
-    li {
+    :global(li) {
         color: #FFF;
         list-style: none;
 
@@ -38,15 +52,5 @@
         display: inline-block;
 
         cursor: pointer;
-    }
-
-    nav {
-        display: flex;
-
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-end;
-
-        padding-right: 70px;
     }
 </style>

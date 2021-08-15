@@ -1,12 +1,11 @@
-<div class="mainView">
+<script>
+import ViewStack from "./ViewStack.svelte";
 
-</div>
+</script>
+
+<ViewStack class="mainView">
+
+</ViewStack>
 
 <style lang="scss">
-    .mainView {
-        height: 100%;
-        
-
-        background-color: #1f1f1f;
-    }
 </style>

@@ -1,5 +1,4 @@
 <script>
-import ViewStack from "./ViewStack.svelte";
 
 </script>
 
@@ -12,7 +11,7 @@ import ViewStack from "./ViewStack.svelte";
 </nav>
 
 <style lang="scss">
-    :global(nav) {
+    nav {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -20,22 +19,24 @@ import ViewStack from "./ViewStack.svelte";
     
         padding-right: 70px;
     }
-
-    :global(ul) {
+    
+    ul {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-
+        
         font-size: 36px;
-
+        
         border: 0;
         margin: 0;
         padding: 50px;
         box-sizing: border-box;
+
         background-color: #1f1f1f;
+        border-radius: 12px;
     }
 
-    :global(li) {
+    li {
         color: #FFF;
         list-style: none;
 

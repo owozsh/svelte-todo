@@ -1,12 +1,15 @@
 <script lang="ts">
-import MainView from "./components/MainView.svelte";
-import Sidebar from "./components/Sidebar.svelte";
+import MainView from "../components/MainView.svelte";
+import Sidebar from "../components/Sidebar.svelte";
 </script>
 
-<main>
-	<Sidebar/>
-	<MainView/>
-</main>
+<svelte:head>
+	<main>
+		<Sidebar/>
+		<MainView/>
+	</main>
+</svelte:head>
+
 
 <style lang="scss">
 	:global(*) {

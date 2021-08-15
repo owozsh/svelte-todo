@@ -9,6 +9,7 @@ import AddButton from "./AddButton.svelte";
 
 <style lang="scss">
     .mainView {
+        position: relative;
         display: flex;
         flex-direction: column;
         justify-content: center;

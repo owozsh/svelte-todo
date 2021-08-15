@@ -28,6 +28,8 @@
   },
   "type": "module",
   "dependencies": {
-    "node-sass": "^6.0.1"
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "node-sass": "^6.0.1",
+    "svelte-icons": "^2.1.0"
   }
 }

@@ -37,8 +37,9 @@
     }
 
     li {
-        color: #FFF;
+        color: #ddd;
         list-style: none;
+        font-family: 'STIX Two Text', serif;
 
         border: 0;
         padding: 0;

@@ -56,5 +56,13 @@
         display: inline-block;
 
         cursor: pointer;
+
+        transition-duration: 0.2s;
+        transition-timing-function: cubic-bezier();
+
+        &:hover {
+            transform: translate(3px, 0);
+            color: $bright_white;
+        }
     }
 </style>

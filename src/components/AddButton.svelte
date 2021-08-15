@@ -34,7 +34,7 @@ import TiPlus from 'svelte-icons/ti/TiPlus.svelte'
 
         &:hover {
             transform: translate(0, -3px);
-            background-color: #FFF;
+            background-color: $bright_white;
         }
     }
     

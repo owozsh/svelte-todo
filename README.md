@@ -1,3 +1,1 @@
 # Aisaka
-
-Calendar for humans.

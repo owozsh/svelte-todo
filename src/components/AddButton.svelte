@@ -2,6 +2,12 @@
 import TiPlus from 'svelte-icons/ti/TiPlus.svelte'
 </script>
 
+<button>
+    <div class="icon">
+        <TiPlus/>
+    </div>
+</button>
+
 <style lang="scss">
     @import '../styles/vars.scss';
 
@@ -20,6 +26,16 @@ import TiPlus from 'svelte-icons/ti/TiPlus.svelte'
         border: none;
         border-radius: 10px;
         background-color: $white;
+
+        cursor: pointer;
+
+        transition-duration: 0.2s;
+        transition-timing-function: cubic-bezier();
+
+        &:hover {
+            transform: translate(0, -3px);
+            background-color: #FFF;
+        }
     }
     
     .icon {
@@ -29,9 +45,3 @@ import TiPlus from 'svelte-icons/ti/TiPlus.svelte'
         height: 1.5rem;
     }
 </style>
-
-<button>
-    <div class="icon">
-        <TiPlus/>
-    </div>
-</button>

@@ -1,5 +1,5 @@
 <script>
-import TiPlus from 'svelte-icons/ti/TiPlus.svelte'
+    import TiPlus from 'svelte-icons/ti/TiPlus.svelte';
 </script>
 
 <button>

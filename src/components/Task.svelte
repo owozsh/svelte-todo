@@ -3,7 +3,7 @@
 </script>
 
 <li>
-    <button on:click={() => console.log('clicked')}>
+    <button on:click={() => checked = !checked}>
         <div class="taskToggle {checked ? 'checked' : ''}"></div>
         Hellooooo
     </button>
@@ -37,18 +37,27 @@
         transition-timing-function: cubic-bezier();
 
         &:hover {
-            //transform: translate(0, -3px);
+            transform: translate(0, -3px);
             background-color: $bright_white;
+
+            .taskToggle {
+                border: 2px solid $bright_white;
+            }
         }
     }
 
     .taskToggle {
-        width: 1.5rem;
-        height: 1.5rem;
+        width: 1rem;
+        height: 1rem;
         margin-right: 1rem;
 
         border-radius: 50%;
-        border: 2px solid $black;
+        border: 2px solid $white;
+
+        box-shadow: 0 0 0 3px $black;
+
+        transition-duration: 0.1s;
+        transition-timing-function: cubic-bezier();
     }
 
     .checked {

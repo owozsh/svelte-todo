@@ -35,7 +35,7 @@
         box-sizing: border-box;
 
         background-color: $black;
-        border-radius: 12px;
+        border-radius: $roundedWindow;
     }
 
     li {

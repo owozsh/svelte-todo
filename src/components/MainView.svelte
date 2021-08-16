@@ -18,6 +18,6 @@ import EverydayTasks from "./EverydayTasks.svelte";
         flex-direction: column;
         
         background-color: $black;
-        border-radius: 12px;
+        border-radius: $roundedWindow;
     }
 </style>

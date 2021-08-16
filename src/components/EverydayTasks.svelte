@@ -12,6 +12,4 @@ import Task from "./Task.svelte";
     ul {
         padding: 1rem;
     }
-
-    
 </style>

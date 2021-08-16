@@ -24,7 +24,7 @@ import TiPlus from 'svelte-icons/ti/TiPlus.svelte'
         color: $black;
     
         border: none;
-        border-radius: 10px;
+        border-radius: $roundedElement;
         background-color: $white;
 
         cursor: pointer;

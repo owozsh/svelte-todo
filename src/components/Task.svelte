@@ -1,11 +1,16 @@
 <script>
+    export let taskTitle;
     let checked = false;
+
+    let handleTick = () => {
+        checked = !checked;
+    }
 </script>
 
 <li>
-    <button on:click={() => checked = !checked}>
+    <button on:click={handleTick}>
         <div class="taskToggle {checked ? 'checked' : ''}"></div>
-        Hellooooo
+        {taskTitle}
     </button>
 </li>
 
@@ -14,6 +19,12 @@
 
     li {
         list-style: none;
+
+        margin-bottom: 1rem;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
     }
 
     button {

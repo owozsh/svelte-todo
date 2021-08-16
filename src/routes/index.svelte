@@ -4,16 +4,20 @@ import Sidebar from "../components/Sidebar.svelte";
 </script>
 
 <svelte:head>
-	<main>
-		<title>Aisaka</title>
-		<Sidebar/>
-		<MainView/>
-	</main>
+	<title>Aisaka</title>
 </svelte:head>
 
+<main>
+	<Sidebar/>
+	<MainView/>
+</main>
 
 <style lang="scss">
 	@import '../styles/vars';
+
+	:global(#svelte) {
+		height: 100%;
+	}
 
 	:global(*) {
 		box-sizing: border-box;

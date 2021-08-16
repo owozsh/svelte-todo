@@ -1,9 +1,21 @@
 <script>
+    import { createEventDispatcher } from 'svelte';
+
     export let taskTitle;
     let checked = false;
-
+    
+    const deleteEvent = createEventDispatcher();
+    
+    function deleteTask() {
+        deleteEvent('deleteTask', {
+            taskTitle: taskTitle
+        });
+    }
+    
     let handleTick = () => {
         checked = !checked;
+
+        setTimeout(deleteTask, 1000);
     }
 </script>
 

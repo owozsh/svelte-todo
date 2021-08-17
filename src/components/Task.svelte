@@ -1,5 +1,6 @@
 <script>
     import { createEventDispatcher } from 'svelte';
+    import { fly } from 'svelte/transition';
 
     export let taskTitle;
     let checked = false;
@@ -19,7 +20,7 @@
     }
 </script>
 
-<li>
+<li out:fly={{x:25}}>
     <button on:click={handleTick}>
         <div class="taskToggle {checked ? 'checked' : ''}"></div>
         {taskTitle}
@@ -81,6 +82,10 @@
 
         transition-duration: 0.1s;
         transition-timing-function: cubic-bezier();
+
+        + button {
+            opacity: 0;
+        }
     }
 
     .checked {

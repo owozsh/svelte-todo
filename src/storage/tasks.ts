@@ -7,7 +7,6 @@ type Task = {
 }
 
 export const tasks = writable(JSON.parse(localStorage.getItem('tasks')) || []);
-console.log(JSON.parse(localStorage.getItem('tasks')));
 
 export function addTask(title) {
     tasks.update(tasks => {
@@ -16,7 +15,6 @@ export function addTask(title) {
     });
     tasks.subscribe(tasks => localStorage.setItem('tasks', JSON.stringify(tasks)));
 
-    console.log(JSON.parse(localStorage.getItem('tasks')));
 }
 
 export function deleteTask(id) {
@@ -26,5 +24,4 @@ export function deleteTask(id) {
     );
 
     tasks.subscribe(tasks => localStorage.setItem('tasks', JSON.stringify(tasks)));
-    console.log(JSON.parse(localStorage.getItem('tasks')));
 }

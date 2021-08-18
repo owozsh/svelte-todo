@@ -9,8 +9,6 @@ type Task = {
 export const tasks = writable(JSON.parse(localStorage.getItem('tasks')) || []);
 console.log(JSON.parse(localStorage.getItem('tasks')));
 
-//export const tasks = writable([]);
-
 export function addTask(title) {
     tasks.update(tasks => {
         const newId = tasks.length === 0 ? 1 : tasks[tasks.length - 1].id + 1;

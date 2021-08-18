@@ -1,19 +1,16 @@
 <script>
     import Task from "./Task.svelte";
 
-    export let tasks = [
-        {'title': 'test1', 'done': false},
-        {'title': 'test2', 'done': false}
-    ];
+    export let tasks;
 
-    let handleDelete = (event) => {
-        tasks = tasks.filter(task => task.title !== event.detail.title);
+    function handleDeleteTask(event) {
+        tasks = tasks.filter(task => task.id !== event.detail.id);
     }
 </script>
 
 <ul>
     {#each tasks as task}
-    <Task title={task.title} done={task.done} on:deleteTask={handleDelete}/>
+    <Task id={task.id} title={task.title} done={task.done} on:deleteTask={handleDeleteTask}/>
 	{/each}
 </ul>
 

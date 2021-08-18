@@ -2,7 +2,7 @@
     import TiPlus from 'svelte-icons/ti/TiPlus.svelte';
 </script>
 
-<button>
+<button on:click>
     <div class="icon">
         <TiPlus/>
     </div>

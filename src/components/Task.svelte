@@ -2,6 +2,7 @@
     import { createEventDispatcher } from 'svelte';
     import { fly } from 'svelte/transition';
 
+    export let id;
     export let title;
     export let done;
     
@@ -9,6 +10,7 @@
     
     function deleteTask() {
         deleteEvent('deleteTask', {
+            id: id,
             title: title,
             done: true
         });

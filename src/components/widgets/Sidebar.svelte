@@ -11,7 +11,7 @@
 </nav>
 
 <style lang="scss">
-    @import '../styles/vars.scss';
+    @import '../../styles/vars.scss';
 
     nav {
         display: flex;

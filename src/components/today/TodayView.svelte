@@ -1,37 +1,46 @@
 <script>
-    import { createEventDispatcher } from 'svelte';
     import { fly } from 'svelte/transition';
 
-    export let id;
-    export let title;
-    export let done;
-    
-    const deleteEvent = createEventDispatcher();
-    
-    function deleteTask() {
-        deleteEvent('deleteTask', {
-            id: id,
-            title: title,
-            done: true
-        });
-    }
-    
-    let handleTick = () => {
-        done = !done;
+    import { tasks, addTask, deleteTask } from '../../storage/tasks';
 
-        setTimeout(deleteTask, 1000);
-    }
+    import AddButton from "../widgets/AddButton.svelte";
 </script>
 
-<li out:fly={{x:25}}>
-    <button on:click={handleTick}>
-        <div class="taskToggle {done ? 'done' : ''}"></div>
-        {title}
-    </button>
-</li>
+<div class="mainView">
+    <ul>
+        {#each $tasks as task}
+            <li in:fly={{y:25}} out:fly={{x:25}}>
+                <button on:click={
+                    () => {
+                        deleteTask(task.id);
+                        task.status = !task.status;
+                    }
+                }>
+                    <div class="taskToggle {task.status ? 'done' : ''}"></div>
+                    {task.title}
+                </button>
+            </li>
+        {/each}
+    </ul>
+    <AddButton on:click={() => addTask(prompt())}/>
+</div>
 
 <style lang="scss">
-    @import "../styles/vars.scss";
+    @import '../../styles/vars.scss';
+
+    .mainView {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        
+        background-color: $black;
+        border-radius: $roundedWindow;
+    }
+
+    ul {
+        margin: 0;
+        padding: 1rem;
+    }
 
     li {
         list-style: none;

@@ -9,7 +9,7 @@
 </button>
 
 <style lang="scss">
-    @import '../styles/vars.scss';
+    @import '../../styles/vars.scss';
 
     button {
         display: flex;

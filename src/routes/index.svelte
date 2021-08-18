@@ -1,6 +1,6 @@
 <script lang="ts">
-import MainView from "../components/MainView.svelte";
-import Sidebar from "../components/Sidebar.svelte";
+	import TodayView from "../components/today/TodayView.svelte";
+	import Sidebar from "../components/widgets/Sidebar.svelte";
 </script>
 
 <svelte:head>
@@ -9,7 +9,7 @@ import Sidebar from "../components/Sidebar.svelte";
 
 <main>
 	<Sidebar/>
-	<MainView/>
+	<TodayView/>
 </main>
 
 <style lang="scss">

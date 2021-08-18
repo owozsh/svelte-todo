@@ -1,20 +1,18 @@
 import { writable } from 'svelte/store';
 
-type Task = {
-    id: number;
-    title: string;
-    status: boolean;
-}
+export const tasks = writable([]);
 
-export const tasks = writable(JSON.parse(localStorage.getItem('tasks')) || []);
+if (typeof localStorage !== 'undefined') {
+    tasks.set(JSON.parse(localStorage.getItem('tasks')) || []);
+}
 
 export function addTask(title) {
     tasks.update(tasks => {
         const newId = tasks.length === 0 ? 1 : tasks[tasks.length - 1].id + 1;
         return [...tasks, {id: newId, title: title, status: false}];
     });
-    tasks.subscribe(tasks => localStorage.setItem('tasks', JSON.stringify(tasks)));
 
+    tasks.subscribe(tasks => localStorage.setItem('tasks', JSON.stringify(tasks)));
 }
 
 export function deleteTask(id) {

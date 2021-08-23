@@ -1,4 +1,5 @@
 <script>
+    import { onMount } from 'svelte';
     import { fly } from 'svelte/transition';
 
     import { tasks, addTask, deleteTask } from '../../storage/tasks';
